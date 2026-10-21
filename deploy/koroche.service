@@ -1,0 +1,22 @@
+[Unit]
+Description=Koroche (Long Story Short) - 4cm.su link shortener
+After=network.target
+
+[Service]
+User=koroche
+Group=koroche
+WorkingDirectory=/opt/koroche
+EnvironmentFile=/etc/koroche.env
+ExecStart=/usr/bin/node server/index.js
+Restart=always
+RestartSec=2
+# ограничения: сервису нужна только своя папка с данными
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/koroche
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+node_modules/
+data/
+.env
+*.sqlite
+*.sqlite-*
+assets-src/
+docs/
+# картинка страницы 404 — личная, не входит в репозиторий; положите свою в server/public/site/404.jpg
+server/public/site/404.jpg

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Короче — панель</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="/favicon.svg" alt="" width="28" height="28"> <b>Короче</b> <span class="muted">· 4 см: больше не нужно</span></div>
+  <div id="userbar" hidden><span id="username" class="muted"></span> <button id="logout" class="ghost">Выйти</button></div>
+</header>
+
+<main>
+  <section id="login" hidden class="card center">
+    <h1>Вход</h1>
+    <p class="muted">Создавайте короткие ссылки и смотрите статистику. Вход через VK, у каждого пользователя свои ссылки.</p>
+    <a class="btn primary" href="/auth/login">Войти через VK</a>
+  </section>
+
+  <section id="app" hidden>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Поиск по коду, адресу, названию, тегу…" autocomplete="off">
+      <button id="new" class="btn primary">+ Новая ссылка</button>
+    </div>
+    <div id="tagbar" class="chips"></div>
+    <div id="list" class="list" aria-live="polite"></div>
+    <p id="empty" class="muted center" hidden>Ссылок нет.</p>
+  </section>
+</main>
+
+<dialog id="editor">
+  <form method="dialog" id="editform" autocomplete="off">
+    <h2 id="edittitle">Новая ссылка</h2>
+    <label>Длинный адрес
+      <input name="url" type="url" required placeholder="https://…" maxlength="4096">
+    </label>
+    <label>Свой код <span class="muted">(необязательно)</span>
+      <input name="code" pattern="[A-Za-z0-9_\-]{1,32}" maxlength="32" placeholder="сгенерируется сам">
+    </label>
+    <label>Название <span class="muted">(если пусто — возьмём с сайта)</span>
+      <input name="title" maxlength="300">
+    </label>
+    <label>Теги <span class="muted">(через запятую)</span>
+      <input name="tags" placeholder="youtube, boosty">
+    </label>
+    <div class="row2">
+      <label>Действует с <input name="valid_since" type="datetime-local"></label>
+      <label>Действует до <input name="valid_until" type="datetime-local"></label>
+    </div>
+    <p id="formerr" class="err" role="alert"></p>
+    <div class="actions">
+      <button type="button" class="ghost" data-close>Отмена</button>
+      <button type="submit" class="btn primary" id="save">Сохранить</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="qr">
+  <h2>QR-код</h2>
+  <div class="center"><img id="qrimg" alt="QR-код" width="256" height="256"><p id="qrurl" class="mono"></p></div>
+  <div class="actions">
+    <a id="qrsvg" class="btn" download>SVG</a>
+    <a id="qrpng" class="btn" download>PNG</a>
+    <button class="ghost" data-close>Закрыть</button>
+  </div>
+</dialog>
+
+<dialog id="stats">
+  <h2 id="statstitle">Статистика</h2>
+  <div id="statsbody"></div>
+  <div class="actions"><button class="ghost" data-close>Закрыть</button></div>
+</dialog>
+
+<div id="toast" role="status"></div>
+<script src="/app.js" type="module"></script>
+</body>
+</html>

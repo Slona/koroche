@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40.4 — не найдено · Короче</title>
+    <style>
+        /* Общие стили для всей страницы */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Контейнер-карточка (адаптируется под любой экран) */
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px; /* Ограничение ширины на больших мониторах */
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Легкий эффект при наведении на ПК */
+        }
+
+        /* Контейнер для изображения */
+        .image-container {
+            width: 100%;
+            position: relative;
+            background-color: #f0f0f0;
+            display: block;
+        }
+
+        /* Главный секрет адаптивности картинки */
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Блок с текстом под картинкой */
+        .content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Красивая адаптивная кнопка */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #007aff; /* Стильный синий цвет */
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Оптимизация для мобильных устройств (экраны меньше 480px) */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Основная карточка -->
+    <main class="card">
+        
+        <!-- Блок изображения -->
+        <div class="image-container">
+            <!-- Вставьте имя вашего файла вместо ИМЯ_ВАШЕГО_ФАЙЛА.jpg -->
+            <img src="/404.jpg" alt="Oops! Not found! It is smaller than 40.4mm!" class="responsive-image" loading="lazy">
+        </div>
+
+        <!-- Текстовый блок -->
+        <div class="content">
+            
+        </div>
+
+    </main>
+
+</body>
+</html>

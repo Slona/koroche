@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Короче — 4 см: больше не нужно</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  :root { color-scheme: light dark; --bg1: #f5f7fa; --bg2: #c3cfe2; --ink: #1a1a1a; --mute: #666; --card: #fff; --accent: #e8453c; }
+  @media (prefers-color-scheme: dark) { :root { --bg1: #1b1f27; --bg2: #11141a; --ink: #f1f1f1; --mute: #9aa3b2; --card: #232833; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { min-height: 100vh; display: grid; place-items: center; padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, var(--bg1), var(--bg2)); color: var(--ink); }
+  main { width: 100%; max-width: 640px; background: var(--card); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    padding: 28px 24px 32px; text-align: center; }
+  svg { width: 100%; height: auto; display: block; margin-bottom: 8px; }
+  h1 { font-size: clamp(2.4rem, 9vw, 3.6rem); letter-spacing: -.02em; }
+  .en { color: var(--mute); margin-top: 2px; font-size: 1.05rem; }
+  .slogan { margin-top: 22px; font-size: 1.25rem; font-weight: 600; }
+  .slogan em { color: var(--accent); font-style: normal; }
+  .slogan small { display: block; margin-top: 4px; font-size: .95rem; font-weight: 400; color: var(--mute); }
+</style>
+</head>
+<body>
+<main>
+  <svg viewBox="0 0 600 190" role="img" aria-label="Длинная ссылка, разрезанная ножницами до 4 сантиметров">
+    <!-- длинная-предлинная ссылка -->
+    <path d="M0 60 C 40 20, 70 100, 110 60 S 180 20, 215 60" fill="none" stroke="#8a93a6" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/>
+    <text x="8" y="26" font-size="13" fill="#8a93a6" font-family="monospace">https://очень-длинная-ссылка.ru/ещё/длиннее/и-ещё/…</text>
+    <!-- ножницы -->
+    <text x="222" y="72" font-size="34" transform="rotate(-8 235 60)">✂️</text>
+    <!-- результат -->
+    <rect x="285" y="45" width="130" height="30" rx="15" fill="#e8453c"/>
+    <text x="350" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" font-family="monospace">4cm.su/Xm4P2</text>
+    <!-- линейка -->
+    <g transform="translate(110 118)">
+      <rect width="380" height="44" rx="5" fill="#f2c94c" stroke="#b8902a"/>
+      <g stroke="#7a5f14" stroke-width="1.5">
+        <path d="M0 0v18M38 0v12M76 0v18M114 0v12M152 0v18M190 0v12M228 0v18M266 0v12M304 0v18M342 0v12M380 0v18"/>
+      </g>
+      <g font-size="13" fill="#7a5f14" text-anchor="middle" font-family="sans-serif">
+        <text x="0" y="33" dx="8">0</text><text x="76" y="33">1</text><text x="152" y="33">2</text><text x="228" y="33">3</text><text x="304" y="33">4 см</text>
+      </g>
+      <path d="M0 -6H304" stroke="#e8453c" stroke-width="3"/><path d="M0 -12v12M304 -12v12" stroke="#e8453c" stroke-width="3"/>
+    </g>
+  </svg>
+  <h1>Короче</h1>
+  <p class="en">Long Story Short</p>
+  <p class="slogan">4 см: <em>больше не нужно</em><small>4cm that’s all you need</small></p>
+</main>
+</body>
+</html>
