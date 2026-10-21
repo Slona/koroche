@@ -1,0 +1,10 @@
+[Unit]
+Description=Koroche database backup
+
+[Service]
+Type=oneshot
+User=koroche
+Group=koroche
+WorkingDirectory=/opt/koroche
+Environment=DB_PATH=/var/lib/koroche/koroche.sqlite BACKUP_DIR=/var/backups/koroche KEEP=14
+ExecStart=/usr/bin/node scripts/backup.js

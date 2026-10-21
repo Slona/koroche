@@ -73,3 +73,6 @@ npm run dev              # вход без VK: http://panel.localhost:3010/auth/
 
 ## Лицензия
 [MIT](LICENSE)
+
+## Резервные копии
+`deploy/koroche-backup.{service,timer}` ежедневно делают консистентный снимок SQLite (`scripts/backup.js`: копия, gzip, хранятся последние 14). Включение: `systemctl enable --now koroche-backup.timer`. Восстановление: остановить сервис, распаковать снимок (`gunzip`) поверх `DB_PATH`, запустить сервис.

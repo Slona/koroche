@@ -72,3 +72,6 @@ npm run dev              # login without VK: http://panel.localhost:3010/auth/de
 
 ## License
 [MIT](LICENSE)
+
+## Backups
+`deploy/koroche-backup.{service,timer}` make a daily online snapshot of the SQLite database (`scripts/backup.js`: consistent copy, gzip, keeps the last 14). Enable with `systemctl enable --now koroche-backup.timer`. Restore: stop the service, `gunzip` the snapshot over `DB_PATH`, start the service.
